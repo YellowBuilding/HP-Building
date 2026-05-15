@@ -175,7 +175,7 @@ function SideBySideDiagram() {
   const ENV_H = 120, ELEC_H = 60, HP_SPLIT_Y = Y0 + ENV_H;
 
   return (
-    <svg viewBox="0 0 960 340" className="w-full h-auto" style={{ maxHeight: 380 }}>
+    <svg viewBox="0 0 960 360" className="w-full h-auto" style={{ maxHeight: 380 }}>
       <text x="215" y="18" textAnchor="middle" fontFamily="Bricolage Grotesque, sans-serif" fontSize="18" fontWeight="700" fill="#AAAAAA" letterSpacing="0.10em">GASKETEL</text>
       <text x="705" y="18" textAnchor="middle" fontFamily="Bricolage Grotesque, sans-serif" fontSize="18" fontWeight="700" fill="#8FD8A1" letterSpacing="0.10em">WARMTEPOMP</text>
       <rect x={GAS_SQ_X} y={Y0} width={GAS_SQ_W} height={H} fill="#888888" />
