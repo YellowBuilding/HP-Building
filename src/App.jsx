@@ -175,9 +175,9 @@ function SideBySideDiagram() {
   const ENV_H = 120, ELEC_H = 60, HP_SPLIT_Y = Y0 + ENV_H;
 
   return (
-    <svg viewBox="0 0 960 310" className="w-full h-auto" style={{ maxHeight: 380 }}>
-      <text x="302" y="18" textAnchor="middle" fontFamily="Bricolage Grotesque, sans-serif" fontSize="18" fontWeight="700" fill="#AAAAAA" letterSpacing="0.10em">GASKETEL</text>
-      <text x="702" y="18" textAnchor="middle" fontFamily="Bricolage Grotesque, sans-serif" fontSize="18" fontWeight="700" fill="#8FD8A1" letterSpacing="0.10em">WARMTEPOMP</text>
+    <svg viewBox="0 0 960 340" className="w-full h-auto" style={{ maxHeight: 380 }}>
+      <text x="215" y="18" textAnchor="middle" fontFamily="Bricolage Grotesque, sans-serif" fontSize="18" fontWeight="700" fill="#AAAAAA" letterSpacing="0.10em">GASKETEL</text>
+      <text x="705" y="18" textAnchor="middle" fontFamily="Bricolage Grotesque, sans-serif" fontSize="18" fontWeight="700" fill="#8FD8A1" letterSpacing="0.10em">WARMTEPOMP</text>
       <rect x={GAS_SQ_X} y={Y0} width={GAS_SQ_W} height={H} fill="#888888" />
       <text x={GAS_SQ_X + GAS_SQ_W / 2} y={MID_W + 7} textAnchor="middle" fontFamily="IBM Plex Sans, sans-serif" fontSize="20" fontWeight="500" fill="white">Gas</text>
       <path d={`M ${GAS_ARROW_X} ${Y0} L ${GAS_ARROW_END} ${Y0} L ${GAS_LOSS_TIP} ${Y0 + LOSS_H / 2} L ${GAS_ARROW_END} ${Y_SPLIT} L ${GAS_ARROW_X} ${Y_SPLIT} Z`} fill="#E84545" />
@@ -195,10 +195,7 @@ function SideBySideDiagram() {
       <text x={(HP_ARROW_X + HP_ARROW_END) / 2} y={Y0 + LOSS_H / 2 + 5} textAnchor="middle" fontFamily="IBM Plex Sans, sans-serif" fontSize="13" fontWeight="500" fill="white">Verlies</text>
       <path d={`M ${HP_ARROW_X} ${Y_SPLIT} L ${HP_ARROW_END} ${Y_SPLIT} L ${HP_WARMTE_TIP} ${MID_W} L ${HP_ARROW_END} ${Y1} L ${HP_ARROW_X} ${Y1} Z`} fill="#2DBA5C" />
       <text x={(HP_ARROW_X + HP_ARROW_END) / 2} y={MID_W + 7} textAnchor="middle" fontFamily="IBM Plex Sans, sans-serif" fontSize="20" fontWeight="500" fill="white">Warmte</text>
-
-      <text x={(GAS_SQ_X + GAS_WARMTE_TIP) / 2} y={Y1 + 28} textAnchor="middle" fontFamily="Bricolage Grotesque, sans-serif" fontSize="18" fontWeight="600" fill="#AAAAAA" letterSpacing="0.14em">GASKETEL</text>
       <text x={(GAS_SQ_X + GAS_WARMTE_TIP) / 2} y={Y1 + 48} textAnchor="middle" fontFamily="Bricolage Grotesque, sans-serif" fontSize="11" fontWeight="500" fill="#AAAAAA" letterSpacing="0.12em" opacity="0.75">85%–95% EFFICIËNTIE</text>
-      <text x={(HP_SQ_X + HP_WARMTE_TIP) / 2} y={Y1 + 28} textAnchor="middle" fontFamily="Bricolage Grotesque, sans-serif" fontSize="18" fontWeight="600" fill="#8FD8A1" letterSpacing="0.14em">WARMTEPOMP</text>
       <text x={(HP_SQ_X + HP_WARMTE_TIP) / 2} y={Y1 + 48} textAnchor="middle" fontFamily="Bricolage Grotesque, sans-serif" fontSize="11" fontWeight="500" fill="#8FD8A1" letterSpacing="0.12em" opacity="0.75">280%–450% EFFICIËNTIE</text>
     </svg>
   );
