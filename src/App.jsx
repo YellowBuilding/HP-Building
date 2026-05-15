@@ -77,30 +77,7 @@ export default function HPBuildingSalesTool() {
             React.createElement("span", { className: "section-label" }, "01 \u00b7 Het verschil in \u00e9\u00e9n plaatje"),
             React.createElement("div", { className: "p-8 md:p-12", style: { background: "#0E1A14" } },
               React.createElement(SideBySideDiagram, null),
-              React.createElement("div", { className: "mt-8 pt-6", style: { borderTop: "1px solid #2A3530" } },
-                React.createElement("p", { className: "text-base leading-7 max-w-3xl", style: { color: "#C9D1CD" } },
-                  React.createElement("strong", { style: { color: "white" } }, "Beide systemen leveren dezelfde warmte."),
-                  " Bij de warmtepomp betaal je alleen voor de dunne donkergroene strook \u2014 groene elektriciteit. De rest komt gratis uit de omgeving. Daarom: 3-4\u00d7 zo effici\u00ebnt op de energierekening."
-                )
-              )
-            )
-          ),
-
-          React.createElement("section", { className: "mb-12", style: { marginTop: "4rem" } },
-            React.createElement("span", { className: "section-label" }, "02 \u00b7 Dashboard \u2014 kosten per kWh warmte"),
-            React.createElement("div", { className: "gg-card p-8 md:p-12" },
-              React.createElement("div", { className: "grid grid-cols-1 md:grid-cols-3 gap-10 mb-10" },
-                React.createElement(InputField, { label: "Gasprijs (all-in)", unit: "EUR/m3", value: gasPrice, min: 0.5, max: 3, step: 0.01, onChange: setGasPrice, hint: "Inclusief energiebelasting, ODE, netbeheer" }),
-                React.createElement(InputField, { label: "Elektraprijs (all-in)", unit: "EUR/kWh", value: elecPrice, min: 0.05, max: 0.6, step: 0.005, onChange: setElecPrice, hint: "Zakelijk grootverbruik inclusief belastingen" }),
-                React.createElement("div", null,
-                  React.createElement("div", { className: "gg-label text-xs mb-3", style: { color: "var(--ink-soft)" } }, "Energielabel gebouw"),
-                  React.createElement("div", { className: "flex flex-wrap gap-1 mb-3" },
-                    Object.keys(HEAT_DEMAND).map(l =>
-                      React.createElement("button", { key: l, onClick: () => setLabel(l), className: "gg-label-btn " + (label === l ? "active" : "") }, l)
-                    )
-                  ),
-                  React.createElement("div", { className: "text-xs gg-mono", style: { color: "var(--ink-soft)" } }, "SCOP " + fmt(scop, 1) + " - " + heatDemand + " kWh/m2/jr")
-                )
+              
               ),
               React.createElement("div", { className: "grid grid-cols-1 md:grid-cols-2 gap-6" },
                 React.createElement(OutputBar, { title: "Gasketel", value: eurKwhGas, unit: "EUR / kWh warmte", color: "var(--gas)", bgColor: "var(--gas-soft)", formula: fmt(gasPrice, 2) + " / (9,7 x 0,97)" }),
@@ -162,7 +139,7 @@ export default function HPBuildingSalesTool() {
 }
 
 function SideBySideDiagram() {
-  return React.createElement("svg", { width: "100%", viewBox: "0 0 680 480", role: "img" },
+  return React.createElement("svg", { width: "100%", viewBox: "0 0 680 400", role: "img" },
     React.createElement("rect", { x:"0", y:"0", width:"680", height:"480", fill:"#0B1F14", rx:"12" }),
 
     React.createElement("text", { x:"170", y:"36", textAnchor:"middle", fontFamily:"Bricolage Grotesque, system-ui, sans-serif", fontSize:"11", fontWeight:"700", fill:"#6B7D74", letterSpacing:"0.18em" }, "GASKETEL"),
@@ -197,8 +174,6 @@ function SideBySideDiagram() {
 
     React.createElement("rect", { x:"0", y:"420", width:"680", height:"60", fill:"#091710" }),
     React.createElement("rect", { x:"0", y:"420", width:"680", height:"1", fill:"#1E3526" }),
-    React.createElement("text", { x:"340", y:"446", textAnchor:"middle", fontFamily:"IBM Plex Sans, system-ui, sans-serif", fontSize:"12", fontWeight:"600", fill:"#C8D8D0" }, "Beide systemen leveren dezelfde warmte."),
-    React.createElement("text", { x:"340", y:"465", textAnchor:"middle", fontFamily:"IBM Plex Sans, system-ui, sans-serif", fontSize:"11", fill:"#4A6055" }, "Warmtepomp: 3-4x minder energiekosten door gratis omgevingswarmte.")
   );
 }
 
