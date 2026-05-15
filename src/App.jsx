@@ -162,33 +162,46 @@ export default function HPBuildingSalesTool() {
 }
 
 function SideBySideDiagram() {
-  const Y0=30,H=180,LOSS_H=22,Y_SPLIT=52,Y1=210,MID_W=120;
-  const GAS_CX=112,HP_CX=602;
-  return React.createElement("svg", { viewBox: "0 0 960 400", style: { width: "100%", height: "auto" } },
-    React.createElement("text", { x: "215", y: "18", textAnchor: "middle", fontFamily: "Bricolage Grotesque, sans-serif", fontSize: "18", fontWeight: "700", fill: "#AAAAAA", letterSpacing: "0.10em" }, "GASKETEL"),
-    React.createElement("text", { x: "705", y: "18", textAnchor: "middle", fontFamily: "Bricolage Grotesque, sans-serif", fontSize: "18", fontWeight: "700", fill: "#8FD8A1", letterSpacing: "0.10em" }, "WARMTEPOMP"),
-    React.createElement("rect", { x: "15", y: "30", width: "195", height: "180", fill: "#888888" }),
-    React.createElement("text", { x: String(GAS_CX), y: "127", textAnchor: "middle", fontFamily: "IBM Plex Sans, sans-serif", fontSize: "20", fontWeight: "500", fill: "white" }, "Gas"),
-    React.createElement("path", { d: "M 210 30 L 395 30 L 403 41 L 395 52 L 210 52 Z", fill: "#E84545" }),
-    React.createElement("text", { x: "302", y: "46", textAnchor: "middle", fontFamily: "IBM Plex Sans, sans-serif", fontSize: "13", fontWeight: "500", fill: "white" }, "Verlies"),
-    React.createElement("path", { d: "M 210 52 L 395 52 L 415 120 L 395 210 L 210 210 Z", fill: "#2DBA5C" }),
-    React.createElement("text", { x: "302", y: "134", textAnchor: "middle", fontFamily: "IBM Plex Sans, sans-serif", fontSize: "20", fontWeight: "500", fill: "white" }, "Warmte"),
-    React.createElement("rect", { x: "505", y: "30", width: "195", height: "120", fill: "#8FD8A1" }),
-    React.createElement("text", { x: String(HP_CX), y: "82", textAnchor: "middle", fontFamily: "IBM Plex Sans, sans-serif", fontSize: "16", fontWeight: "500", fill: "#0E1A14" }, "Omgevings-"),
-    React.createElement("text", { x: String(HP_CX), y: "102", textAnchor: "middle", fontFamily: "IBM Plex Sans, sans-serif", fontSize: "16", fontWeight: "500", fill: "#0E1A14" }, "warmte"),
-    React.createElement("rect", { x: "505", y: "150", width: "195", height: "60", fill: "#2E8055" }),
-    React.createElement("text", { x: String(HP_CX), y: "173", textAnchor: "middle", fontFamily: "IBM Plex Sans, sans-serif", fontSize: "15", fontWeight: "500", fill: "white" }, "Groene"),
-    React.createElement("text", { x: String(HP_CX), y: "191", textAnchor: "middle", fontFamily: "IBM Plex Sans, sans-serif", fontSize: "15", fontWeight: "500", fill: "white" }, "elektriciteit"),
-    React.createElement("path", { d: "M 700 30 L 885 30 L 893 41 L 885 52 L 700 52 Z", fill: "#E84545" }),
-    React.createElement("text", { x: "792", y: "46", textAnchor: "middle", fontFamily: "IBM Plex Sans, sans-serif", fontSize: "13", fontWeight: "500", fill: "white" }, "Verlies"),
-    React.createElement("path", { d: "M 700 52 L 885 52 L 905 120 L 885 210 L 700 210 Z", fill: "#2DBA5C" }),
-    React.createElement("text", { x: "792", y: "134", textAnchor: "middle", fontFamily: "IBM Plex Sans, sans-serif", fontSize: "20", fontWeight: "500", fill: "white" }, "Warmte"),
-    React.createElement("text", { x: "215", y: "275", textAnchor: "middle", fontFamily: "Bricolage Grotesque, sans-serif", fontSize: "36", fontWeight: "700", fill: "#E84545" }, "85-95%"),
-    React.createElement("text", { x: "215", y: "345", textAnchor: "middle", fontFamily: "Bricolage Grotesque, sans-serif", fontSize: "16", fontWeight: "700", fill: "#E84545" }, "EFFICIENTIE"),
-    React.createElement("text", { x: "705", y: "275", textAnchor: "middle", fontFamily: "Bricolage Grotesque, sans-serif", fontSize: "36", fontWeight: "700", fill: "#2DBA5C" }, "280-450%"),
-    React.createElement("text", { x: "705", y: "345", textAnchor: "middle", fontFamily: "Bricolage Grotesque, sans-serif", fontSize: "16", fontWeight: "700", fill: "#2DBA5C" }, "EFFICIENTIE")
+  return React.createElement("svg", { width: "100%", viewBox: "0 0 680 480", role: "img" },
+    React.createElement("rect", { x:"0", y:"0", width:"680", height:"480", fill:"#0B1F14", rx:"12" }),
+
+    React.createElement("text", { x:"170", y:"36", textAnchor:"middle", fontFamily:"Bricolage Grotesque, system-ui, sans-serif", fontSize:"11", fontWeight:"700", fill:"#6B7D74", letterSpacing:"0.18em" }, "GASKETEL"),
+    React.createElement("text", { x:"510", y:"36", textAnchor:"middle", fontFamily:"Bricolage Grotesque, system-ui, sans-serif", fontSize:"11", fontWeight:"700", fill:"#4DB87A", letterSpacing:"0.18em" }, "WARMTEPOMP"),
+    React.createElement("line", { x1:"340", y1:"18", x2:"340", y2:"462", stroke:"#1E3526", strokeWidth:"1" }),
+
+    React.createElement("rect", { x:"24", y:"52", width:"152", height:"188", rx:"4", fill:"#4A4A4A" }),
+    React.createElement("text", { x:"100", y:"148", textAnchor:"middle", fontFamily:"IBM Plex Sans, system-ui, sans-serif", fontSize:"18", fontWeight:"600", fill:"white" }, "Gas"),
+    React.createElement("path", { d:"M 176 52 L 296 52 L 304 72 L 296 92 L 176 92 Z", fill:"#C23535" }),
+    React.createElement("text", { x:"236", y:"76", textAnchor:"middle", fontFamily:"IBM Plex Sans, system-ui, sans-serif", fontSize:"11", fontWeight:"600", fill:"white", letterSpacing:"0.05em" }, "VERLIES"),
+    React.createElement("path", { d:"M 176 92 L 296 92 L 316 146 L 296 240 L 176 240 Z", fill:"#1DAF56" }),
+    React.createElement("text", { x:"236", y:"172", textAnchor:"middle", fontFamily:"IBM Plex Sans, system-ui, sans-serif", fontSize:"18", fontWeight:"600", fill:"white" }, "Warmte"),
+    React.createElement("line", { x1:"40", y1:"268", x2:"300", y2:"268", stroke:"#1E3526", strokeWidth:"0.5" }),
+    React.createElement("text", { x:"170", y:"306", textAnchor:"middle", fontFamily:"Bricolage Grotesque, system-ui, sans-serif", fontSize:"48", fontWeight:"700", fill:"#C23535" }, "90%"),
+    React.createElement("text", { x:"170", y:"330", textAnchor:"middle", fontFamily:"Bricolage Grotesque, system-ui, sans-serif", fontSize:"11", fontWeight:"600", fill:"#7A3535", letterSpacing:"0.16em" }, "EFFICIENTIE"),
+    React.createElement("text", { x:"170", y:"370", textAnchor:"middle", fontFamily:"IBM Plex Sans, system-ui, sans-serif", fontSize:"11", fill:"#4A6055" }, "Per kWh gas 0,9 kWh warmte"),
+
+    React.createElement("rect", { x:"364", y:"52", width:"152", height:"125", rx:"4", fill:"#5BBF88" }),
+    React.createElement("text", { x:"440", y:"107", textAnchor:"middle", fontFamily:"IBM Plex Sans, system-ui, sans-serif", fontSize:"14", fontWeight:"500", fill:"#0A2A1A" }, "Omgevings-"),
+    React.createElement("text", { x:"440", y:"126", textAnchor:"middle", fontFamily:"IBM Plex Sans, system-ui, sans-serif", fontSize:"14", fontWeight:"500", fill:"#0A2A1A" }, "warmte"),
+    React.createElement("rect", { x:"364", y:"177", width:"152", height:"63", rx:"4", fill:"#1A7A45" }),
+    React.createElement("text", { x:"440", y:"203", textAnchor:"middle", fontFamily:"IBM Plex Sans, system-ui, sans-serif", fontSize:"12", fontWeight:"600", fill:"#A8E8C0" }, "Groene"),
+    React.createElement("text", { x:"440", y:"221", textAnchor:"middle", fontFamily:"IBM Plex Sans, system-ui, sans-serif", fontSize:"12", fontWeight:"600", fill:"#A8E8C0" }, "elektriciteit"),
+    React.createElement("path", { d:"M 516 52 L 636 52 L 644 72 L 636 92 L 516 92 Z", fill:"#C23535" }),
+    React.createElement("text", { x:"576", y:"76", textAnchor:"middle", fontFamily:"IBM Plex Sans, system-ui, sans-serif", fontSize:"11", fontWeight:"600", fill:"white", letterSpacing:"0.05em" }, "VERLIES"),
+    React.createElement("path", { d:"M 516 92 L 636 92 L 656 146 L 636 240 L 516 240 Z", fill:"#1DAF56" }),
+    React.createElement("text", { x:"576", y:"172", textAnchor:"middle", fontFamily:"IBM Plex Sans, system-ui, sans-serif", fontSize:"18", fontWeight:"600", fill:"white" }, "Warmte"),
+    React.createElement("line", { x1:"380", y1:"268", x2:"656", y2:"268", stroke:"#1E3526", strokeWidth:"0.5" }),
+    React.createElement("text", { x:"510", y:"306", textAnchor:"middle", fontFamily:"Bricolage Grotesque, system-ui, sans-serif", fontSize:"48", fontWeight:"700", fill:"#1DAF56" }, "300-450%"),
+    React.createElement("text", { x:"510", y:"330", textAnchor:"middle", fontFamily:"Bricolage Grotesque, system-ui, sans-serif", fontSize:"11", fontWeight:"600", fill:"#1A6B3A", letterSpacing:"0.16em" }, "EFFICIENTIE"),
+    React.createElement("text", { x:"510", y:"370", textAnchor:"middle", fontFamily:"IBM Plex Sans, system-ui, sans-serif", fontSize:"11", fill:"#3A7055" }, "Per kWh stroom 3-4,5 kWh warmte"),
+
+    React.createElement("rect", { x:"0", y:"420", width:"680", height:"60", fill:"#091710" }),
+    React.createElement("rect", { x:"0", y:"420", width:"680", height:"1", fill:"#1E3526" }),
+    React.createElement("text", { x:"340", y:"446", textAnchor:"middle", fontFamily:"IBM Plex Sans, system-ui, sans-serif", fontSize:"12", fontWeight:"600", fill:"#C8D8D0" }, "Beide systemen leveren dezelfde warmte."),
+    React.createElement("text", { x:"340", y:"465", textAnchor:"middle", fontFamily:"IBM Plex Sans, system-ui, sans-serif", fontSize:"11", fill:"#4A6055" }, "Warmtepomp: 3-4x minder energiekosten door gratis omgevingswarmte.")
   );
 }
+
 
 function InputField({ label, unit, value, min, max, step, onChange, hint }) {
   return React.createElement("div", null,
