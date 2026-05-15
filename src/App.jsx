@@ -83,8 +83,7 @@ export default function HPBuildingSalesTool() {
 
           {/* ===== HEADER ===== */}
           <header className="mb-12 pb-8" style={{ borderBottom: '1px solid var(--rule)' }}>
-            <div className="flex items-baseline gap-3 mb-3">
-              <div style={{ width: 32, height: 4, background: 'var(--accent)' }}></div>
+            
               <span className="gg-label text-xs" style={{ color: 'var(--ink-soft)' }}>HP_Building · Sales Enablement</span>
             </div>
             <h1 className="gg-display text-5xl md:text-6xl font-semibold leading-tight leading-none">
@@ -182,7 +181,7 @@ export default function HPBuildingSalesTool() {
 
           {/* ===== BUILDING OPEX CALCULATOR ===== */}
           <section className="mb-12" style={{ marginTop: '4rem' }}>
-            <span className="section-label">03 · Jaaropex per gebouw — kantoor of school</span>
+            <span className="section-label">03 · Jaaropex per gebouw — kantoor</span>
             <div className="gg-card p-8 md:p-12">
               <div className="grid grid-cols-1 md:grid-cols-3 gap-10 mb-12">
                 <div className="md:col-span-1">
@@ -192,7 +191,7 @@ export default function HPBuildingSalesTool() {
                     value={floorArea}
                     min={200} max={3000} step={50}
                     onChange={setFloorArea}
-                    hint="Verwarmd vloeroppervlak (BVO) — MKB+ sweet spot 500-1.500 m²"
+                    hint="Verwarmd vloeroppervlak (BVO) — "
                   />
                   <div className="mt-6 p-4" style={{ background: 'var(--bg)', border: '1px solid var(--rule)' }}>
                     <div className="gg-label text-xs mb-3" style={{ color: 'var(--ink-soft)' }}>Aannames uit dashboard</div>
@@ -254,7 +253,7 @@ export default function HPBuildingSalesTool() {
             </div>
 
             <p className="mt-4 text-xs leading-relaxed" style={{ color: 'var(--ink-soft)' }}>
-              <strong>Calibratie:</strong> warmtevraag-kentallen zijn indicatief voor kantoor/school in NL. Werkelijke vraag varieert sterk met gebruik, openingstijden, isolatie en ventilatiestrategie. Voor offerte: altijd een energiescan of meterdata gebruiken.
+              <strong>Calibratie:</strong> warmtevraag-kentallen zijn indicatief voor kantoor in NL. Werkelijke vraag varieert sterk met gebruik, openingstijden, isolatie en ventilatiestrategie. Voor offerte: altijd een energiescan of meterdata gebruiken.
             </p>
           </section>
 
