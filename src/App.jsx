@@ -32,43 +32,6 @@ export default function HPBuildingSalesTool() {
   const elecConsumption = annualHeat / scop;
   const gasOpex = gasConsumption * gasPrice;
   const hpOpex = elecConsumption * elecPrice;
-  const savings = ga
-$dest = "C:\Users\demia\Documents\DDeveloper\HP_Building\src\App.jsx"
-Set-Content -Path $dest -Encoding UTF8 -Value @'
-import React, { useState } from "react";
-import { Flame, Wind, TrendingDown } from "lucide-react";
-
-const GAS_KWH_PER_M3 = 9.7;
-const HR_EFFICIENCY = 0.97;
-const GAS_CO2_PER_M3 = 1.788;
-const ELEC_CO2_PER_KWH = 0.27;
-
-const HEAT_DEMAND = {
-  "A++": 35, "A": 50, "B": 75, "C": 100, "D": 140, "E": 170, "F": 200, "G": 230,
-};
-const SCOP_BY_LABEL = {
-  "A++": 4.5, "A": 4.2, "B": 3.8, "C": 3.3, "D": 2.8, "E": 2.7, "F": 2.4, "G": 2.3,
-};
-
-const fmt = (n, d = 0) => new Intl.NumberFormat("nl-NL", { maximumFractionDigits: d, minimumFractionDigits: d }).format(n);
-const fmtEur = (n) => "EUR " + fmt(Math.round(n));
-
-export default function HPBuildingSalesTool() {
-  const [gasPrice, setGasPrice] = useState(1.12);
-  const [elecPrice, setElecPrice] = useState(0.135);
-  const [label, setLabel] = useState("C");
-  const [floorArea, setFloorArea] = useState(1000);
-
-  const scop = SCOP_BY_LABEL[label];
-  const heatDemand = HEAT_DEMAND[label];
-  const eurKwhGas = gasPrice / (GAS_KWH_PER_M3 * HR_EFFICIENCY);
-  const eurKwhHP = elecPrice / scop;
-  const eurDelta = ((eurKwhGas - eurKwhHP) / eurKwhGas) * 100;
-  const annualHeat = floorArea * heatDemand;
-  const gasConsumption = annualHeat / (GAS_KWH_PER_M3 * HR_EFFICIENCY);
-  const elecConsumption = annualHeat / scop;
-  const gasOpex = gasConsumption * gasPrice;
-  const hpOpex = elecConsumption * elecPrice;
   const savings = gasOpex - hpOpex;
   const savingsPct = (savings / gasOpex) * 100;
   const gasCO2 = gasConsumption * GAS_CO2_PER_M3;
