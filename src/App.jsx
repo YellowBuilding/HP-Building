@@ -183,10 +183,10 @@ function SideBySideDiagram() {
     React.createElement("text", { x: "792", y: "46", textAnchor: "middle", fontFamily: "IBM Plex Sans, sans-serif", fontSize: "13", fontWeight: "500", fill: "white" }, "Verlies"),
     React.createElement("path", { d: "M 700 52 L 885 52 L 905 120 L 885 210 L 700 210 Z", fill: "#2DBA5C" }),
     React.createElement("text", { x: "792", y: "134", textAnchor: "middle", fontFamily: "IBM Plex Sans, sans-serif", fontSize: "20", fontWeight: "500", fill: "white" }, "Warmte"),
-    React.createElement("text", { x: "215", y: "275", textAnchor: "middle", fontFamily: "Bricolage Grotesque, sans-serif", fontSize: "72", fontWeight: "700", fill: "#E84545" }, "85-95%"),
-    React.createElement("text", { x: "215", y: "345", textAnchor: "middle", fontFamily: "Bricolage Grotesque, sans-serif", fontSize: "28", fontWeight: "700", fill: "#E84545" }, "EFFICIENTIE"),
-    React.createElement("text", { x: "705", y: "275", textAnchor: "middle", fontFamily: "Bricolage Grotesque, sans-serif", fontSize: "72", fontWeight: "700", fill: "#2DBA5C" }, "280-450%"),
-    React.createElement("text", { x: "705", y: "345", textAnchor: "middle", fontFamily: "Bricolage Grotesque, sans-serif", fontSize: "28", fontWeight: "700", fill: "#2DBA5C" }, "EFFICIENTIE")
+    React.createElement("text", { x: "215", y: "275", textAnchor: "middle", fontFamily: "Bricolage Grotesque, sans-serif", fontSize: "36", fontWeight: "700", fill: "#E84545" }, "85-95%"),
+    React.createElement("text", { x: "215", y: "345", textAnchor: "middle", fontFamily: "Bricolage Grotesque, sans-serif", fontSize: "16", fontWeight: "700", fill: "#E84545" }, "EFFICIENTIE"),
+    React.createElement("text", { x: "705", y: "275", textAnchor: "middle", fontFamily: "Bricolage Grotesque, sans-serif", fontSize: "36", fontWeight: "700", fill: "#2DBA5C" }, "280-450%"),
+    React.createElement("text", { x: "705", y: "345", textAnchor: "middle", fontFamily: "Bricolage Grotesque, sans-serif", fontSize: "16", fontWeight: "700", fill: "#2DBA5C" }, "EFFICIENTIE")
   );
 }
 
